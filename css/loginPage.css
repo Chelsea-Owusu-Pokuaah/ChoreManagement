@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #111;
+    /* align-items: center;
+    justify-content: center; */
+
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.side1,
+.side2 {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    /* Text color for better visibility on dark background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: whitesmoke;
+}
+
+#side1 {
+    background-color: #111;
+    /* Darker shade of black */
+    justify-content: center;
+
+
+}
+
+#side2 {
+    background-color: #333;
+    /* Medium shade of black */
+    /* border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.signIn {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+input {
+    background-color: #777;
+    border: none;
+    border-bottom: 2px solid #fff;
+    /* White bottom border */
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    justify-content: center;
+
+}
+
+.signInbtn {
+    background-color: #555;
+    /* Dark shade of black for the button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+.signInbtn:hover {
+    background-color: #777;
+    /* Slightly lighter shade on hover */
+}
+
+#registerHere {
+    color: white;
+}
+
+
+#registerHere:hover {
+    color: #e8175d;
+}
+td a{
+    color: #fff;
+    text-decoration: none;
+}

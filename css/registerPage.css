@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #111;
+    /* align-items: center;
+    justify-content: center; */
+
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.side1,
+.side2 {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    /* Text color for better visibility on dark background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#side1 {
+    background-color: #111;
+    /* Darker shade of black */
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+
+#side2 {
+    background-color: #333;
+    /* Medium shade of black */
+
+    justify-content: center;
+    align-items: center;
+}
+
+.signIn {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: #777;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    width: 100%;
+}
+.input-group.gender-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group.gender-group label {
+    margin-right: 10px; /* Adjust the spacing between label and radio button */
+}
+
+.input-group.gender-group input[type="radio"] {
+    margin-right: 5px; /* Adjust the spacing between radio button and label */
+}
+
+.signInbtn {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.signInbtn:hover {
+    background-color: #777;
+}
+
+#registerHere {
+    color: white;
+    margin-top: 20px;
+}
+
+#registerHere:hover {
+    color: #e8175d;
+}

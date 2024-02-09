@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    padding: 10px;
+    cursor: pointer;
+   
+}
+.nav li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav li:hover {
+    background-color: #555;
+}
+
+.nav li.active {
+    background-color: #e74c3c;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.widgets {
+    display: flex;
+    justify-content: space-around;
+}
+
+.widget {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 300px;
+    height: 100px;
+}
+
+.widget h2 {
+    margin-bottom: 15px;
+}
+
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    bottom: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+.logout{
+    position: absolute;
+    bottom: 10px;
+    left:150px;
+}
+.chore-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #a0aebc;
+    padding: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    background-color: #333;
+    border: none;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.chore-container>div {
+    flex: 1;
+    padding: 0 10px;
+
+}
+.chore-container:hover{
+    background-color: #555;
+}
+.chore-details-link {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.stat2 {
+    font-size: 2em;
+    font-weight: 500;}
+
+.status-container {
+    display: flex;
+    align-items: center;
+}
+
+.status-container .icon {
+    margin-right: 8px;
+    /* Adjust the margin as needed */
+}
+.container{
+    margin: 50px;
+    margin-top: 100px;
+}
+.statBox {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.widget:hover{
+    background-color: #555;
+}
