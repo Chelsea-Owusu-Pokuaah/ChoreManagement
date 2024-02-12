@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `Assigned_people`
 --
-
+-- DROP DATABASE chores_mgt IF EXIST;
 CREATE TABLE `Assigned_people` (
   `pid` int(11) NOT NULL,
   `assignmentid` int(11) NOT NULL
@@ -266,3 +266,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+SELECT *
+FROM People;
