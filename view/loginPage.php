@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/loginPage.css">
-    <script src="/js/loginPage.js" defer></script>
+    <link rel="stylesheet" href="../css/loginPage.css">
+    <script src="../js/loginPage.js" defer></script>
 </head>
 
 <body>
@@ -15,12 +15,12 @@
             <h2 class="signIn">
                 Sign in
             </h2>
-            <form action="/views/homePage.php" name="signIn" id="signIn" class="signIn" onsubmit="return registerValidate()" method="post">
+            <form action="../view/homePage.php" name="signIn" id="signIn" class="signIn" onsubmit="return registerValidate()" method="post">
                 <input name="emailSignin" id="emailSignIn" type="email" placeholder="Email">
                 <input name="passwordSignin" id="passwordSignIn" type="password" placeholder="Password" required>
                 <button type="submit" class="signInbtn" id="signInbtn">Log in</button>
             </form>
-            <p>Don't have an account? <a href="/views/registerPage.php" id="registerHere"> Register Here</a> </p>
+            <p>Don't have an account? <a href="../view/registerPage.php" id="registerHere"> Register Here</a> </p>
         </section>
         <section class="side2" id="side2">
             <!-- Content for the second section goes here -->

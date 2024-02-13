@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="/css/registerPage.css">
+    <link rel="stylesheet" href="../css/registerPage.css">
      
 </head>
 
@@ -21,7 +21,7 @@
             <h2 class="signIn">
                 Sign Up
             </h2>
-            <form action="homePage.php" method="POST" name="registrationForm" id="registrationForm"
+            <form action="../action/register_user.php" method="POST" name="registrationForm" id="registrationForm"
                 onsubmit="return validateRegistrationForm()">
                 <div class="input-group">
                     <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
@@ -40,15 +40,17 @@
                     <input type="date" id="dob" name="dob" required>
                 </div>
 
-                <div class="input-group">
-                    <select id="familyRole" name="familyRole" required>
-                        <option value="0">Select Family Role</option>
-                        <option value="1">Father</option>
-                        <option value="2">Mother</option>
-                        <option value="3">Son</option>
-                        <option value="4">Daughter</option>
-                    </select>
-                </div>
+                <!-- <div class="input-group">
+                <label for="familyRole">Family Role:</label>
+                <select id="familyRole" name="familyRole" required>
+                <option value="0">Select</option>
+               // <?php
+                //include ("../function/select_role.php");
+                //foreach ($familyRoles as $role) {
+                 //   echo "<option value='{$role['fid']}'>{$role['fam_name']}</option>";
+               // }
+               // ?>
+                </div> -->
 
                 <div class="input-group">
                     <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
@@ -66,12 +68,12 @@
                     <input type="password" id="retypePassword" name="retypePassword" placeholder="Retype Password"
                         required>
                 </div>
-                <button type="submit" class="signUpbtn" id="signUpbtn">Register</button>
+                <button type="submit" class="signUpbtn" id="signUpbtn" name="signUpbtn" >Register</button>
             </form>
-            <p>Already have an account? <a href="/views/loginPage.php" id="registerHere">Login here</a></p>
+            <p>Already have an account? <a href="../view/loginPage.php" id="registerHere">Login here</a></p>
         </section>
     </div>
-    <script src="/js/registerPage.js"></script>
+    <script src="../js/registerPage.js"></script>
 </body>
 
 </html>

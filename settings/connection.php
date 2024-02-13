@@ -3,7 +3,7 @@ $host= 'localhost';
 $name = 'root';
 $password ='';
 $db = 'chores_mgt';
-$conn = new mysqli($name, $name, $password, $db);
+$conn = new mysqli($host, $name, $password, $db);
 if ($conn->connect_error) {
     die('Connection Failed: ' . $conn->connect_error);
 }else {
