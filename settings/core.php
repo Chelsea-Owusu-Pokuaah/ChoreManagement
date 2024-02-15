@@ -2,9 +2,9 @@
 session_start();
 function userIdExist(){
     if(!isset($_SESSION['user_id'])){
-        header("Location: loginPage.php");
+        header("Location: ../view/loginPage.php");
         die();
     }
 }
+
 die();
-?>

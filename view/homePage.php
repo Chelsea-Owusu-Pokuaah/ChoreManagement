@@ -17,8 +17,8 @@
             <div class="logo">ChoRest</div>
             <ul class="nav">
                 <li class="active">Home</li>
-                <li><a href="manageChores.php">Manage Chores</a></li>
-                <li><a href="homeAdmin.php">Admin Home</a></li>
+                <li><a href="../view/manageChores.php">Manage Chores</a></li>
+                <li><a href="../view/homeAdmin.php">Admin Home</a></li>
             </ul>
             <div class="logout">
                 <button class="logout-btn">Log Out</button>
