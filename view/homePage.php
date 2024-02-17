@@ -18,10 +18,12 @@
             <ul class="nav">
                 <li class="active">Home</li>
                 <li><a href="../view/manageChores.php">Manage Chores</a></li>
-                <li><a href="../view/homeAdmin.php">Admin Home</a></li>
+                <!-- <li><a href="../view/homeAdmin.php">Admin Home</a></li> -->
             </ul>
             <div class="logout">
+                <form action="../Login/logout_view.php" name="logout_btn">
                 <button class="logout-btn">Log Out</button>
+                </form>
             </div>
         </div>
         <div class="content">

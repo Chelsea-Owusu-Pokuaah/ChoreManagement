@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chore Management</title>
+    <title>Assign chore</title>
     <link rel="stylesheet" href="../css/assignChore.css">
-    <script src="../js/addChore.js" defer></script>
 </head>
 
 <body>
@@ -16,8 +15,8 @@
         </div>
         <ul class="nav">
             <li><a href="../admin/homeAdmin.php">Home</a></li>
-            <li class="active"><a href="../admin/choreManagement.php">Chore Management</a></li>
-            <li><a href="../admin/assignChore.php">Chore Assignment</a></li>
+            <li><a href="../admin/choreManagement.php">Chore Management</a></li>
+            <li class="active"><a href="../admin/assignChore.php">Chore Assignment</a></li>
         </ul>
         <div class="logout">
             <form action="../Login/logout_view.php" name="logout_btn">
@@ -27,20 +26,30 @@
     </div>
     <div class="middle">
         <header class="header">
-            <h1>Manage All chores</h1>
+            <div class="a">
+                <h2>Welcome Back</h2>
+                <p class="date">January 8, Friday</p>
+            </div>
         </header>
+
         <div class="choreTable">
             <section class="table__body">
                 <table>
                     <thead>
                         <tr>
                             <th> Chore Name</th>
+                            <th> Person Assigned</th>
+                            <th> Due Date</th>
+                            <th> Chore Status</th>
                             <th> Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td> Washing Dishes </td>
+                            <td> John Doe</td>
+                            <td> 15-02-22 </td>
+                            <td> InProgress </td>
                             <td>
                                 <button id="choreAction">Action</button>
                             </td>
@@ -48,36 +57,54 @@
                         <tr>
                         <tr>
                             <td> Washing Dishes </td>
+                            <td> John Doe</td>
+                            <td> 15-02-22 </td>
+                            <td> InProgress </td>
                             <td>
                                 <button id="choreAction">Action</button>
                             </td>
                         </tr>
                         <tr>
                             <td> Washing Dishes </td>
+                            <td> John Doe</td>
+                            <td> 15-02-22 </td>
+                            <td> InProgress </td>
                             <td>
                                 <button id="choreAction">Action</button>
                             </td>
                         </tr>
                         <tr>
                             <td> Washing Dishes </td>
+                            <td> John Doe</td>
+                            <td> 15-02-22 </td>
+                            <td> InProgress </td>
                             <td>
                                 <button id="choreAction">Action</button>
                             </td>
                         </tr>
                         <tr>
                             <td> Washing Dishes </td>
+                            <td> John Doe</td>
+                            <td> 15-02-22 </td>
+                            <td> InProgress </td>
                             <td>
                                 <button id="choreAction">Action</button>
                             </td>
                         </tr>
                         <tr>
                             <td> Washing Dishes </td>
+                            <td> John Doe</td>
+                            <td> 15-02-22 </td>
+                            <td> InProgress </td>
                             <td>
                                 <button id="choreAction">Action</button>
                             </td>
                         </tr>
                         <tr>
                             <td> Washing Dishes </td>
+                            <td> John Doe</td>
+                            <td> 15-02-22 </td>
+                            <td> InProgress </td>
                             <td>
                                 <button id="choreAction">Action</button>
                             </td>
@@ -91,30 +118,36 @@
         <div class="addChore">
             <div id="assign" class="assignChore">
                 <div class="formLabel">
-                    <span>Add Chore</span>
+                    <span>Assign a chore</span>
                 </div>
                 <div class="form">
-                    <form action="../action/add_chore.php" method="post" name="addChore" id="addChoreForm">
-                        <?php
-                        session_start();
-                        if (isset($_SESSION["chore_exists"])) {
-                            echo '<p class="error-message">' . $_SESSION["chore_exits"] . '</p>';
-                            unset($_SESSION["chore_exits"]);
-                        }
+                    <form action="" method="post" name="assignChore" id="actionChoreAssign">
+                        <label for="dropdown1">Assignee</label>
+                        <select id="dropdown1" name="dropdown1">
+                            <option value="option1">Assign Person</option>
+                            <option value="option2">Yaa Yaa</option>
+                            <option value="option3">John Doe</option>
+                        </select>
 
-                        if (isset($_SESSION["chore_added"])) {
-                            echo '<p class="success-message">' . $_SESSION["chore_added"] . '</p>';
-                            unset($_SESSION["chore_added"]);
-                        }
-                        ?>
-                        <input type="text" id="choreName" name="choreName" placeholder="Chore Name" required>
-                        <button type="submit" name="addChore" id="addChore">Submit</button>
+                        <label for="dropdown2">Assign Chore</label>
+                        <select id="dropdown2" name="dropdown2">
+                            <option value="optionA">Assign Chore</option>
+                            <option value="optionB">Wash Dishes</option>
+                            <option value="optionC">Laundry</option>
+                        </select>
+
+                        <label for="dateInput">Due Date</label>
+                        <input type="date" id="dateInput" name="dateInput">
+
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
 
             </div>
         </div>
     </div>
+
+
 </body>
 
 </html>
