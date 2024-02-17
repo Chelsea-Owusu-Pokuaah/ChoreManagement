@@ -17,22 +17,23 @@ if (isset($_POST['signInbtn'])) {
         if (password_verify($password, $result['passwd'])) {
             $_SESSION['user_id'] = $result['pid'];
             $_SESSION['user_fname'] = $result['fname'];
-            $_SESSION['userlname'] = $result['lname'];
+            $_SESSION['user_lname'] = $result['lname'];
+            $_SESSION['role_id'] = $result['rid'];
             header('Location: ../view/homePage.php');
             exit();
         } else {
             $_SESSION["password_incorrect"] = "Password incorrect";
-            header('Location: ../view/loginPage.php');
+            header('Location: ../Login/login_view.php');
             exit();
         }
     } else {
         $_SESSION["email_DNE"] = "Account doesn't exist";
-        header('Location: ../view/loginPage.php');
+        header('Location: ../Login/login_view.php');
         exit();
     }
 
 } else {
     // redirect to login
-    header('Location: ../view/loginPage.php');
+    header('Location: ../view/login_view.php');
     exit();
 }

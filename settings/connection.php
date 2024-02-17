@@ -9,6 +9,7 @@
     if ($conn->connect_error) {
         die('Connection Failed: ' . $conn->connect_error);
     }
+    echo'success';
     
 
     // Don't forget to close the connection when you are done

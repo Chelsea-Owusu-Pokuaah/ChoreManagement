@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/css/homePage.css">
+    <link rel="stylesheet" href="../css/homePage.css">
     <style>
         .widget {
             background-color: #333;
@@ -26,11 +26,13 @@
             <div class="logo"><p>ChoRest</p></div>
             <ul class="nav">
                 <li class="active">Home</li>
-                <li><a href="/admin/choreManagement.html">Chore Management</a></li>
-                <li><a href="/admin/choreAssignment.html">Chore Assignment</a></li>
+                <li><a href="../admin/choreManagement.php">Chore Management</a></li>
+                <li><a href="../admin/assignChore.php">Chore Assignment</a></li>
             </ul>
             <div class="logout">
+                <form action="../Login/logout_view.php" name="logout_btn">
                 <button class="logout-btn">Log Out</button>
+                </form>
             </div>
         </div>
         <div class="content">

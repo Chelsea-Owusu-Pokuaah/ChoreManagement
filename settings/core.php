@@ -5,6 +5,5 @@ function userIdExist(){
         header("Location: ../view/loginPage.php");
         die();
     }
+    return $_SESSION["user_id"];
 }
-
-die();

@@ -16,11 +16,13 @@
         <div class="sidebar">
             <div class="logo">ChoRest</div>
             <ul class="nav">
-                <li><a href="homePage.html">Home</a></li>
+                <li><a href="../view/homePage.php">Home</a></li>
                 <li class="active">Manage Chores</li>
             </ul>
             <div class="logout">
+                <form action="../Login/logout_view.php" name="logout_btn">
                 <button class="logout-btn">Log Out</button>
+                </form>
             </div>
         </div>
         <div class="content">
