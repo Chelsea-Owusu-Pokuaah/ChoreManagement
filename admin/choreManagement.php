@@ -39,6 +39,9 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        include("../function/chore_fx.php");
+                        ?>
                         <tr>
                             <td> Washing Dishes </td>
                             <td>
@@ -97,6 +100,7 @@
                     <form action="../action/add_chore.php" method="post" name="addChore" id="addChoreForm">
                         <?php
                         session_start();
+
                         if (isset($_SESSION["chore_exists"])) {
                             echo '<p class="error-message">' . $_SESSION["chore_exits"] . '</p>';
                             unset($_SESSION["chore_exits"]);
