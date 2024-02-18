@@ -47,11 +47,13 @@ if (isset($_POST["signUpbtn"])) {
         $_SESSION["account_created"] = "Error creating account. Please try again.";
         header("Location: ../Login/register_view.php");
         echo "failed";
+        $conn->close();
         exit();
     }
 } else {
     $_SESSION["account_created"] = "Error creating account. Please try again.";
     header("Location: ../Login/register_view.php");
+    $conn->close();
     exit();
 }
 

@@ -40,9 +40,9 @@
                     </thead>
                     <tbody>
                         <?php
-                        include("../function/chore_fx.php");
+                            include("../function/chore_fxn.php");
                         ?>
-                        <tr>
+                        <!-- <tr>
                             <td> Washing Dishes </td>
                             <td>
                                 <button id="choreAction">Action</button>
@@ -84,7 +84,7 @@
                             <td>
                                 <button id="choreAction">Action</button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </section>

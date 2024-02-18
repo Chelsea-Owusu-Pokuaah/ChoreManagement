@@ -3,7 +3,6 @@ session_start();
 
 include "../settings/connection.php";
 include "../settings/core.php";
-echo'I am loved1';
 if(isset($_POST["addChore"])){
     userIdExist();
     $choreName = mysqli_real_escape_string($conn, $_POST['choreName']); 
@@ -30,3 +29,4 @@ if(isset($_POST["addChore"])){
         exit();
     }
 }
+$conn->close();
