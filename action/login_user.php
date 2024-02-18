@@ -20,20 +20,23 @@ if (isset($_POST['signInbtn'])) {
             $_SESSION['user_lname'] = $result['lname'];
             $_SESSION['role_id'] = $result['rid'];
             header('Location: ../view/homePage.php');
+            $conn->close();
             exit();
         } else {
             $_SESSION["password_incorrect"] = "Password incorrect";
             header('Location: ../Login/login_view.php');
+            $conn->close();
             exit();
         }
     } else {
         $_SESSION["email_DNE"] = "Account doesn't exist";
         header('Location: ../Login/login_view.php');
+        $conn->close();
         exit();
     }
-
 } else {
     // redirect to login
     header('Location: ../view/login_view.php');
+    $conn->close();
     exit();
 }

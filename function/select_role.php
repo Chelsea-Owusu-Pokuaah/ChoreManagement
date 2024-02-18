@@ -15,4 +15,4 @@ while ($row = $result->fetch_assoc()) {
 }
 
 $conn->close();
-?>
+

@@ -39,7 +39,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <?php
+                            include("../function/chore_fxn.php");
+                        ?>
+                        <!-- <tr>
                             <td> Washing Dishes </td>
                             <td>
                                 <button id="choreAction">Action</button>
@@ -81,7 +84,7 @@
                             <td>
                                 <button id="choreAction">Action</button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </section>
@@ -97,6 +100,7 @@
                     <form action="../action/add_chore.php" method="post" name="addChore" id="addChoreForm">
                         <?php
                         session_start();
+
                         if (isset($_SESSION["chore_exists"])) {
                             echo '<p class="error-message">' . $_SESSION["chore_exits"] . '</p>';
                             unset($_SESSION["chore_exits"]);
