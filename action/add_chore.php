@@ -9,7 +9,7 @@ if(isset($_POST["addChore"])){
     $check_chore_query = "SELECT * FROM Chores WHERE chorename = '$choreName'";
     
     $check_chore_result = mysqli_query($conn, $check_chore_query);
-    
+    // echo"$check_chore_result";
     if (mysqli_num_rows($check_chore_result) > 0) {
         $_SESSION["chore_exists"] = "Chore already exists";
         header("Location: ../admin/choreManagement.php");
