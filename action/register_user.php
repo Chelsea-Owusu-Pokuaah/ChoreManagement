@@ -32,9 +32,12 @@ if (isset($_POST["signUpbtn"])) {
     // Hash password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $default_role = 3;
+    if( $family_role == 1 || $family_role == 2 ){
+        $default_role = 2;
+    } else{
+        $default_role = 3;
+    }
     $insert_person_query = "INSERT INTO People(rid, fid, fname, lname, gender, dob, tel, email, passwd) VALUES ('$default_role', '$family_role', '$fname', '$lname', '$gender', '$dob', '$telnum', '$email', '$hashed_password')";
-    
     
     if (mysqli_query($conn, $insert_person_query)) {
         // Successful registration

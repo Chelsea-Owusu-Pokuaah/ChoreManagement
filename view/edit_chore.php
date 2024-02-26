@@ -1,10 +1,15 @@
+<?php
+    if(isset($_GET["chore_id"])){
+        $choreId = $_GET["chore_id"];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chore Management</title>
+    <title>Edit Chore</title>
     <link rel="stylesheet" href="../css/assignChore.css">
     <script src="../js/addChore.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -29,19 +34,29 @@
     </div>
     <div class="middle">
         <header class="header">
-            <h1>Manage All chores</h1>
+            <h1>Edit Chore</h1>
         </header>
-        <div class="choreTable">
+        <div class = "choreTable">
+        <div class="editPopUp">
+
+
+
+                <form name="editChore" id="editChore" method="post" action='<?php echo "../action/edit_chore_action.php?chore_id=" . $choreId?>'>
+                    <label>New Chore</label>
+                    <input name="newChore" type="text" id="newChore" placeholder="New Chore" required>
+                    <button type="submit" name="updateChoreBtn" id="updateChore">Submit</button>
+                </form>
+            </div> 
+        </div>
+
+        <!-- <div class="choreTable">
             <?php
-            session_start();
-            if (isset($_SESSION["chore_deleted"])) {
-                echo '<p class="success-message">' . $_SESSION["chore_deleted"] . '</p>';
-                unset($_SESSION["chore_deleted"]);
-            }
-            if (isset($_SESSION["chore_updated"])) {
-                echo '<p class="success-message">' . $_SESSION["chore_updated"] . '</p>';
-                unset($_SESSION["chore_updated"]);
-            }
+            // session_start();
+            // if (isset($_SESSION["chore_deleted"])) {
+            //     echo '<p class="success-message">' . $_SESSION["chore_deleted"] . '</p>';
+            //     unset($_SESSION["chore_deleted"]);
+            // }
+
             ?>
             <section class="table__body">
                 <table>
@@ -53,46 +68,40 @@
                     </thead>
                     <tbody>
                         <?php
-                        include("../function/chore_fxn.php");
+                        // include("../function/chore_fxn.php");
                         ?>
                     </tbody>
                 </table>
             </section>
-        </div>
+        </div> -->
     </div>
     <div class="left">
-        <div class="addChore">
+        <!-- <div class="addChore">
             <div id="assign" class="assignChore">
                 <div class="formLabel">
-                    <span>Add Chore</span>
+                    <span>Edit Chore</span> -->
                 </div>
-                <div class="form">
+                <!-- <div class="form">
                     <form action="../action/add_chore.php" method="post" name="addChore" id="addChoreForm">
                         <?php
-                        session_start();
+                        // session_start();
 
-                        if (isset($_SESSION["chore_exists"])) {
-                            echo '<p class="error-message">' . $_SESSION["chore_exits"] . '</p>';
-                            unset($_SESSION["chore_exits"]);
-                        }
+                        // if (isset($_SESSION["chore_exists"])) {
+                        //     echo '<p class="error-message">' . $_SESSION["chore_exits"] . '</p>';
+                        //     unset($_SESSION["chore_exits"]);
+                        // }
 
-                        if (isset($_SESSION["chore_added"])) {
-                            echo '<p class="success-message">' . $_SESSION["chore_added"] . '</p>';
-                            unset($_SESSION["chore_added"]);
-                        }
+                        // if (isset($_SESSION["chore_added"])) {
+                        //     echo '<p class="success-message">' . $_SESSION["chore_added"] . '</p>';
+                        //     unset($_SESSION["chore_added"]);
+                        // }
                         ?>
                         <input type="text" id="choreName" name="choreName" placeholder="Chore Name" required>
                         <button type="submit" name="addChore" id="addChore">Submit</button>
                     </form>
                 </div>
-            </div>
-            <!-- <div class="editPopUp">
-                <form name="editChore" id="editChore">
-                    <label>New Chore</label>
-                    <input type="text" id="newChore" placeholder="New Chore" required>
-                    <button type="submit" name="addChore" id="addChore">Submit</button>
-                </form>
             </div> -->
+
         </div>
     </div>
 </body>

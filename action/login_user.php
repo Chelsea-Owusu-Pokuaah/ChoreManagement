@@ -13,12 +13,18 @@ if (isset($_POST['signInbtn'])) {
 
     if ($result->num_rows > 0) {
         $result = $result->fetch_assoc();
-        var_dump($result);
+        // var_dump($result);
         if (password_verify($password, $result['passwd'])) {
             $_SESSION['user_id'] = $result['pid'];
             $_SESSION['user_fname'] = $result['fname'];
             $_SESSION['user_lname'] = $result['lname'];
             $_SESSION['role_id'] = $result['rid'];
+            if ($_SESSION['role_id'] == 2) {
+                header('Location: ../admin/homeAdmin.php');
+                $conn->close();
+                exit();
+            }
+
             header('Location: ../view/homePage.php');
             $conn->close();
             exit();
