@@ -1,3 +1,7 @@
+<?php
+include("../settings/core.php");
+userIdExist();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chore Management</title>
-    <link rel="stylesheet" href="../css/assignChore.css">
+    <link rel="stylesheet" href="../css/choreAssign.css">
     <script src="../js/addChore.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         crossorigin="anonymous">
@@ -32,17 +36,6 @@
             <h1>Manage All chores</h1>
         </header>
         <div class="choreTable">
-            <?php
-            session_start();
-            if (isset($_SESSION["chore_deleted"])) {
-                echo '<p class="success-message">' . $_SESSION["chore_deleted"] . '</p>';
-                unset($_SESSION["chore_deleted"]);
-            }
-            if (isset($_SESSION["chore_updated"])) {
-                echo '<p class="success-message">' . $_SESSION["chore_updated"] . '</p>';
-                unset($_SESSION["chore_updated"]);
-            }
-            ?>
             <section class="table__body">
                 <table>
                     <thead>
@@ -53,7 +46,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        include("../function/chore_fxn.php");
+                        include_once("../function/chore_fxn.php");
                         ?>
                     </tbody>
                 </table>
@@ -61,6 +54,7 @@
         </div>
     </div>
     <div class="left">
+        <header class="header"></header>
         <div class="addChore">
             <div id="assign" class="assignChore">
                 <div class="formLabel">
@@ -71,14 +65,17 @@
                         <?php
                         session_start();
 
-                        if (isset($_SESSION["chore_exists"])) {
-                            echo '<p class="error-message">' . $_SESSION["chore_exits"] . '</p>';
-                            unset($_SESSION["chore_exits"]);
-                        }
-
                         if (isset($_SESSION["chore_added"])) {
                             echo '<p class="success-message">' . $_SESSION["chore_added"] . '</p>';
                             unset($_SESSION["chore_added"]);
+                        }
+                        if (isset($_SESSION["chore_deleted"])) {
+                            echo '<p class="success-message">' . $_SESSION["chore_deleted"] . '</p>';
+                            unset($_SESSION["chore_deleted"]);
+                        }
+                        if (isset($_SESSION["chore_updated"])) {
+                            echo '<p class="success-message">' . $_SESSION["chore_updated"] . '</p>';
+                            unset($_SESSION["chore_updated"]);
                         }
                         ?>
                         <input type="text" id="choreName" name="choreName" placeholder="Chore Name" required>

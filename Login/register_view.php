@@ -28,12 +28,12 @@
 
                 if (isset($_SESSION["email_exists"])) {
                     echo '<p class="error-message">' . $_SESSION["email_exists"] . '</p>';
-                    unset($_SESSION["email_exists"]); 
+                    unset($_SESSION["email_exists"]);
                 }
 
                 if (isset($_SESSION["account_created"])) {
                     echo '<p class="success-message">' . $_SESSION["account_created"] . '</p>';
-                    unset($_SESSION["account_created"]); 
+                    unset($_SESSION["account_created"]);
                 }
                 ?>
                 <div class="input-group">

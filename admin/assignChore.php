@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assign chore</title>
-    <link rel="stylesheet" href="../css/assignChore.css">
+    <link rel="stylesheet" href="../css/choreAssign.css">
 </head>
 
 <body>
@@ -120,26 +120,58 @@
                 <div class="formLabel">
                     <span>Assign a chore</span>
                 </div>
+                <?php
+                session_start();
+                if (isset($_SESSION["chore_assign"])) {
+                    // echo"smth3";
+                    echo '<p class="success-message">' . $_SESSION["chore_assign"] . '</p>';
+                    unset($_SESSION["chore_assign"]);
+                }
+                ?>
                 <div class="form">
-                    <form action="" method="post" name="assignChore" id="actionChoreAssign">
+
+                    <form action="../action/assign_chore_action.php" method="post" name="assignChore"
+                        id="actionChoreAssign">
                         <label for="dropdown1">Assignee</label>
-                        <select id="dropdown1" name="dropdown1">
-                            <option value="option1">Assign Person</option>
+                        <select id="assignPerson" name="assignee" required>
+                            <option disabled selected value="0">Choose people</option>
+
+                            <?php
+                            include("../action/getAllPeople.php");
+
+                            $result = getPeople();
+                            $PEOPLE_FNAME_INDEX = 1;
+                            $PEOPLE_LNAME_INDEX = 2;
+                            $PEOPLE_ID_INDEX = 0;
+
+                            // var_dump($result);
+                            foreach ($result as $person) {
+                                echo "<option value='{$person[$PEOPLE_ID_INDEX]}'>{$person[$PEOPLE_FNAME_INDEX]} {$person[$PEOPLE_LNAME_INDEX]}</option>";
+                            }
+                            ?>
+                            <!-- <option value="option1">Assign Person</option>
                             <option value="option2">Yaa Yaa</option>
-                            <option value="option3">John Doe</option>
+                            <option value="option3">John Doe</option> -->
                         </select>
 
                         <label for="dropdown2">Assign Chore</label>
-                        <select id="dropdown2" name="dropdown2">
-                            <option value="optionA">Assign Chore</option>
-                            <option value="optionB">Wash Dishes</option>
-                            <option value="optionC">Laundry</option>
+                        <select id="choreToAssign" name="chooseChore" required>
+                            <option disabled selected value="0">Choose chore</option>
+                            <?php
+                            include("../action/get_all_chores.php");
+                            $results = getChores();
+                            $CHORE_NAME_INDEX = 1;
+                            $CHORE_ID_INDEX = 0;
+                            foreach ($results as $chores) {
+                                echo "<option value='" . $chores[$CHORE_ID_INDEX] . "'>" . $chores[$CHORE_NAME_INDEX] . "</option>";
+                            }
+
+                            ?>
                         </select>
 
                         <label for="dateInput">Due Date</label>
-                        <input type="date" id="dateInput" name="dateInput">
-
-                        <button type="submit">Submit</button>
+                        <input type="date" id="dateInput" name="dateInput" pattern="/^\d{4}-\d{2}-\d{2}$/" required>
+                        <input type="submit" name="assignChoreBtn">
                     </form>
                 </div>
 
@@ -147,7 +179,7 @@
         </div>
     </div>
 
-
+    <script src="../js/assign_chore.js"></script>
 </body>
 
 </html>
