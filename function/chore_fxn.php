@@ -10,10 +10,10 @@ foreach ($results as $result) {
         <tr>
             <td>' . $result[$CHORE_NAME_INDEX] . '</td>
             <td>
-                <a class = "delete_icon" href="../action/delete_chore.php?chore_id=' . $result[$CHORE_ID_INDEX] . '">
+                <a style="color: #e74c3c;" class = "delete_icon" href="../action/delete_chore.php?chore_id=' . $result[$CHORE_ID_INDEX] . '">
                     <i class="fa-solid fa-trash-can"></i>
                 </a>
-                <a class = "edit_icon" href="../view/edit_chore.php?chore_id=' . $result[$CHORE_ID_INDEX] . '">
+                <a style="color: #e74c3c;"class = "edit_icon" href="../view/edit_chore.php?chore_id=' . $result[$CHORE_ID_INDEX] . '">
                     <i class="fa-solid fa-pen-to-square"></i> 
                 </a>    
             </td>

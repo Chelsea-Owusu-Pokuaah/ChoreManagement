@@ -1,10 +1,10 @@
 <?php
 session_start();
 
+include_once('../settings/connection.php');    
 
 function getChores(){
-    // global $conn;
-    include_once('../settings/connection.php');    
+    global $conn;
     $get_chore_query = "SELECT * FROM `Chores`";
     $get_chore_result = mysqli_query($conn, $get_chore_query);
 
@@ -16,11 +16,7 @@ function getChores(){
         $results = mysqli_fetch_all($get_chore_result);
     }
 
-    // $result = array();
-    // while ($row = mysqli_fetch_assoc($get_chore_result)) {
-    //     $results[] = $row;
-    // }
-    
-    $conn->close(); 
     return $results;
+    
+
 }

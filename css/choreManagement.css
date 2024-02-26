@@ -14,12 +14,13 @@ body {
     font-family: "Poppins", sans-serif;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #111;
 
 }
 
 .side-bar {
     width: 15%;
-    background: #052659;
+    background: #111;
     float: left;
     padding: auto;
 }

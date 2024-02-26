@@ -10,7 +10,7 @@ if (isset($_POST['updateChoreBtn'])) {
     echo $newChore;
     echo $update_query_result;
     if($update_query_result==true){
-        $_SESSION['chore_updated']='Update success';
+        $_SESSION['chore_updated']='Updated successfully';
         header('Location: ../admin/choreManagement.php');
         exit();
     }

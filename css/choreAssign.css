@@ -14,6 +14,7 @@ body {
     font-family: "Poppins", sans-serif;
     overflow-y: auto;
     overflow-x: hidden;
+    color: #fff;
 
 }
 
@@ -25,7 +26,7 @@ body {
 }
 
 .middle {
-    background: #CADEED;
+    background: #111;
     width: 60%;
     height: 100%;
     /* display: flex; */
@@ -34,7 +35,7 @@ body {
 .log {
     font-size: 24px;
     font-weight: bold;
-    color: #202e44;
+    color: #e74c3c;
     margin-bottom: 20px;
 }
 
@@ -87,14 +88,14 @@ body {
 }
 
 .header {
-    border-bottom: 0.1px solid #021024;
+    border-bottom: 0.1px solid #555;
     height: 10%;
     display: flex;
     align-items: center;
     font-size: x-small;
     /* background: grey; */
     width: 100%;
-    color: #021024;
+    color: #fff;
 }
 
 .header div {
@@ -122,7 +123,7 @@ table {
     margin: auto;
     /* background: #a2c1f1; */
     box-shadow: 2px 2px 2px 2px #dadedf;
-    color: #021024;
+    color: #fff;
 
 }
 
@@ -133,7 +134,7 @@ td {
     border-bottom: 1px solid #dadedf;}
 
 thead {
-    background-color: #5483b3;
+    background-color: #555;
     color: #fff;
     cursor: pointer;
 }
@@ -149,7 +150,7 @@ th span.icon-arrow {
 top: 50%;
 left: 50%; */
     /* transform: translate(-50%, -50%); */
-    background-color: #5483b3;
+    background-color: #333;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -168,7 +169,7 @@ form {
     font-weight: bold;
     margin-bottom: 20px;
     display: block;
-    color: #021024;
+    color: #e74c3c;
 }
 
 form label,
@@ -177,7 +178,7 @@ form input,
 form button {
     display: block;
     margin-bottom: 10px;
-    color: #052659;
+    color: #e74c3c
 
 }
 
@@ -188,7 +189,7 @@ form input {
 }
 
 form button {
-    background-color: #021024;
+    background-color: #e74c3c;
     color: #fff;
     border: none;
     padding: 10px;
@@ -198,7 +199,7 @@ form button {
 
 }
 form button:hover{
-    background-color: #5483b3;
+    background-color: #555;
     color: #CADEED;
 }
 
@@ -206,17 +207,23 @@ form button:hover{
 button:hover,
 .logout-btn:hover,
 form button:hover {
-    background-color: #5483b3;
-    color: #CADEED;
+    background-color: #555;
+    color: #111;
 }
 
 .left {
     width: 25%;
-    background: #CADEED;
+    background: #111;
 }
 
 .addChore {
-    margin-top: 50%;
+    margin-top: 20%;
+}
+.edit-icon{
+    color: #e74c3c;
+}
+.delet-icon{
+    color: #e74c3c;
 }
 
 .form {
@@ -224,7 +231,7 @@ form button:hover {
 }
 #choreAction{
     background: none;
-    color: #021024;
+    color: #e74c3c;
     border: none;
     cursor: pointer;
 }
